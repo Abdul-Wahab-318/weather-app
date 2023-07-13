@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css'
 import { useLocation } from '../../context/LocationProvider'
 import Card from '../../components/Card'
-import { Container } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 
 export default function Home() {
 
@@ -12,10 +12,10 @@ export default function Home() {
 
 
   return (
-    <div className='home-page container'>
+    <Box as='div' pt={'40px'} className='home-page container'>
         <Card>
           nibba balls
         </Card>
-    </div>
+    </Box>
   )
 }
