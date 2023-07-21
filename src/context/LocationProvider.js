@@ -9,11 +9,12 @@ const LocationContext = createContext({
 export const useLocation = () => useContext(LocationContext)
 
 export default function LocationProvider({children}) {
+  //{ latitude : 33.6166912 , longitude : 73.0431488 }
+  //location : rawalpindi default
+  const [location , setLocation] = useState( "33.6166912,73.0431488" )
 
-  const [location , setLocation] = useState({ latitude : 33.6166912 , longitude : 73.0431488 })
-
-  const updateLocation = ( lat , long ) => {
-    setLocation( { latitude : lat , longitude : long } )
+  const updateLocation = ( str ) => {
+    setLocation( str )
   }
 
   return (

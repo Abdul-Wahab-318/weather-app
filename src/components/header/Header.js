@@ -3,9 +3,11 @@ import React , { useState } from 'react'
 import Logo from '../Logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from '../../context/LocationProvider'
 export default function Header() {
 
     let [ query , setQuery ] = useState("")
+    let { location , updateLocation } = useLocation()
 
     let handleChange = ( e ) => {
         setQuery( e.target.value )
@@ -14,11 +16,13 @@ export default function Header() {
 
     let handleSubmit = (event) => {
         if ( event.key === 'Enter' || event.type === 'click' )
-        console.log("submitting")
+        {
+            updateLocation( query )
+        }
     }
 
   return (
-    <header className="header">
+    <header className="header" style={{'backgroundColor' : '#005986'}}>
         <Box bg={'#005986'} py={'15px'} >
             <Container maxW={'1280px'}>
                 <Flex justify={'space-between'} alignItems={'center'}>
