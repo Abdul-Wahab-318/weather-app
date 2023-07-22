@@ -1,15 +1,11 @@
 import React from 'react'
 import './Home.css'
-import { useLocation } from '../../context/LocationProvider'
 import Card from '../../components/Card'
-import { Box, Container , Button , Tab , TabList , Tabs , TabPanels , TabPanel ,HStack} from '@chakra-ui/react'
-import api from '../../api'
-import axios from 'axios'
+import { Box, Stack , Skeleton, Button , Tab , TabList , Tabs , TabPanels , TabPanel ,HStack} from '@chakra-ui/react'
 import Today from '../../components/today/Today'
 import Hourly from '../../components/hourly/Hourly'
+import Daily from '../../components/Daily/Daily'
 export default function Home() {
-
-    const { location , updateLocation } = useLocation()
 
 
   return (
@@ -20,7 +16,7 @@ export default function Home() {
             <HStack className="container" spacing={'40px'} >
               <Tab p={'10px 15px'} borderBottom={'3px solid transparent'} _selected={{ borderBottom: '3px solid white'}}>Today</Tab>
               <Tab p={'10px 15px'} borderBottom={'3px solid transparent'} _selected={{ borderBottom: '3px solid white'}}>Hourly</Tab>
-              <Tab p={'10px 15px'} borderBottom={'3px solid transparent'} _selected={{ borderBottom: '3px solid white'}}>Weekly</Tab>
+              <Tab p={'10px 15px'} borderBottom={'3px solid transparent'} _selected={{ borderBottom: '3px solid white'}}>Daily</Tab>
             </HStack>
           </TabList>
           <TabPanels className='container'>
@@ -31,7 +27,7 @@ export default function Home() {
               <Hourly/>
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              <Daily/>
             </TabPanel>
           </TabPanels>
         </Tabs>
