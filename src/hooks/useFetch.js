@@ -7,7 +7,6 @@ import { useLocation } from "../context/LocationProvider"
 export const useFetch = ( url ) => {
 
     const [ loading , setLoading ] = useState(true)
-    console.log("loading:" , loading)
     const { location , updateLocation } = useLocation()
     const [ data , setData ] = useState({})
     const [ error , setError ] = useState({})

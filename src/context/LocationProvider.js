@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useContext , createContext , useState } from 'react'
 
 const LocationContext = createContext({
@@ -19,12 +19,15 @@ export default function LocationProvider({children}) {
     setLocation( String( position.coords.latitude ) + "," + String( position.coords.longitude )  )
   }
 
-  //get coords from user device and set the position
-  navigator.geolocation.getCurrentPosition( setDefaultPosition )
-
   const updateLocation = ( str ) => {
     setLocation( str )
   }
+  
+  useEffect( () => {
+    //get coords from user device and set the position
+    navigator.geolocation.getCurrentPosition( setDefaultPosition )
+
+  } , [] )
 
   return (
     <LocationContext.Provider value={{location,updateLocation}}>
