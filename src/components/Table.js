@@ -98,7 +98,7 @@ export const HourlyTableRow = ( { data } ) => {
             </h2>
             <AccordionPanel pb={4}>
             <Grid 
-            templateColumns={'1fr 1fr 1fr'} 
+            templateColumns={[ '1fr 1fr' , '1fr 1fr 1fr']} 
             justifyItems={'center'} 
             rowGap={'20px'}
             border={'1px solid gray'} 
@@ -106,7 +106,7 @@ export const HourlyTableRow = ( { data } ) => {
             borderRadius={'5px'} 
             p={'10px 20px'}>
 
-                <HStack>
+                <HStack >
                     <FontAwesomeIcon icon={faTemperature0} color='#2b6cb0' />
                     <div>
                         <Text fontSize={'sm'} mb={'0'}>Feels like</Text>
@@ -121,7 +121,7 @@ export const HourlyTableRow = ( { data } ) => {
                     </div>
                 </HStack>
                 <HStack >
-                    <FontAwesomeIcon icon={faDroplet} color='#2b6cb0' />
+                    <FontAwesomeIcon icon={faDroplet} width={'18px'} color='#2b6cb0' />
                     <div>
                         <Text fontSize={'sm'} mb={'0'}>Humidity</Text>
                         <Text  fontWeight={'500'}>{data.humidity}%</Text>
@@ -137,7 +137,7 @@ export const HourlyTableRow = ( { data } ) => {
                     </div>
                 </HStack>
                 <HStack >
-                    <FontAwesomeIcon icon={faCloud} color='#2b6cb0' />
+                    <FontAwesomeIcon icon={faCloud} width={'18px'} color='#2b6cb0' />
                     <div>
                         <Text fontSize={'sm'} mb={'0'}>Cloud cover</Text>
                         <Text  fontWeight={'500'}>{data.cloud}%</Text>
