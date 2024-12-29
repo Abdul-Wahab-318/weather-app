@@ -4,6 +4,10 @@ The Weather App is a modern, responsive React application that provides real-tim
 
 **[Live Demo](https://weather-awm.netlify.app/)**
 
+![Home page](/weather-1.jpg)
+![Home page](/weather-2.jpg)
+![Home page](/weather-3.jpg)
+
 ## Features
 
 - 🌤 **Real-Time Weather**: Get current weather conditions for any location.
