@@ -2,6 +2,8 @@
 
 The Weather App is a modern, responsive React application that provides real-time weather updates for any city in the world. It uses Chakra UI for styling and WeatherAPI to fetch accurate weather data.
 
+**Live Demo(https://weather-awm.netlify.app/)**
+
 ## Features
 
 - 🌤 **Real-Time Weather**: Get current weather conditions for any location.
